@@ -234,7 +234,7 @@ From your Emmanuel…
 Your Cherish 💙❤️`;
 
 // Prayer
-const prayerMessage = `Mama 💙🙏✨
+const prayerMessage = `Mama  💙🙏✨
 
 Now… let me pray for you.
 
