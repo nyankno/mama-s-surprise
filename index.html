@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>💙❤️ For Mama Victoria</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Animated background -->
+    <div class="bg"></div>
+    <div class="aurora"></div>
+    <div class="bokeh"></div>
+
+    <!-- FX Layers -->
+    <canvas id="sparkles"></canvas>
+    <div id="hearts-layer"></div>
+    <div id="butterflies-layer"></div>
+    <div id="petals-layer"></div>
+
+    <!-- Music -->
+    <button id="musicBtn" class="music-btn" aria-label="Toggle music">♪</button>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="chike.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Intro -->
+    <section class="screen intro active" id="intro">
+        <div class="glass card pop">
+            <div class="badge">For Mama 💙</div>
+            <h1 class="title">A Valentine <span class="accent">Surprise</span> 🌹</h1>
+            <p class="subtitle">
+                Mama Victoria… I kept my heart here. Tap and open it 🥹❤️
+            </p>
+
+            <button class="btn primary" id="openHeartBtn">
+                Open my heart ❤️‍🔥
+            </button>
+
+            <p class="hint">Tip: tap the ♪ to play Chike 🎶</p>
+        </div>
+    </section>
+
+    <!-- Letter -->
+    <section class="screen letter" id="letter">
+        <div class="layout">
+            <div class="glass card">
+                <div class="headerRow">
+                    <h2 class="headline">Dear <span class="accent2">Mama Victoria</span> 💌</h2>
+                    <span class="tag">From Cherish 💙</span>
+                </div>
+
+                <div id="glowHeart" class="glow-heart" aria-hidden="true">❤️</div>
+
+                <p id="typeText" class="type"></p>
+
+                <div class="actions">
+                    <button class="btn soft" id="nextBtn">Next 🙏✨</button>
+                    <button class="btn ghost" id="replayBtn">Replay 🔁</button>
+                </div>
+
+                <p class="tiny-note">If the text is slow, that’s intentional — I want you to feel every word 🥹</p>
+            </div>
+
+            <div class="glass frame card">
+                <div class="photo">
+                    <!-- Optional: replace with an image -->
+                    <!-- <img src="mama.jpg" alt="Mama Victoria" /> -->
+                    <div class="placeholder">
+                        <div class="pulse-heart">❤️</div>
+                        <p>Add her photo here (optional) 🥹</p>
+                    </div>
+                </div>
+
+                <div class="mini">
+                    <div class="chip">Butterflies 🦋</div>
+                    <div class="chip">Flowers 🌸</div>
+                    <div class="chip">Hearts 💙❤️</div>
+                    <div class="chip">Forever ♾️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finale -->
+    <section class="screen finale" id="finale">
+        <div class="glass card center finaleCard">
+            <div class="big-heart">❤️‍🔥</div>
+            <h2 class="headline big">Happy Valentine, Mama 💙</h2>
+            <p class="subtitle" id="finalMsg">
+                You are deeply loved… forever 🥹✨
+            </p>
+
+            <div class="actions centerActions">
+                <button class="btn primary" id="shareBtn">Copy sweet WhatsApp text 💌</button>
+                <button class="btn soft" id="restartBtn">Restart 🔁</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
