@@ -147,7 +147,7 @@ const typeEl = $("#typeText");
 let typingTimer = null;
 
 // Detailed letter
-const loveLetter = `Mama🥹💙
+const loveLetter = `Mama Victoria 🥹💙
 
 There are some people that enter your life and change it…
 And there are some people that become your life.
@@ -234,7 +234,7 @@ From your Emmanuel…
 Your Cherish 💙❤️`;
 
 // Prayer
-const prayerMessage = `Mama 💙🙏✨
+const prayerMessage = `Mama Victoria 💙🙏✨
 
 Now… let me pray for you.
 
@@ -366,5 +366,75 @@ $("#restartBtn").addEventListener("click", () => {
   glowHeart.classList.remove("on");
   showScreen("#intro");
 });
+
+
+/* ===================== FADE SLIDER (up to 4 pics) ===================== */
+(function initFadeSlider(){
+  const slider = document.querySelector("#photoSlider");
+  if(!slider) return;
+
+  const slides = [...slider.querySelectorAll(".slide")];
+  const dotsWrap = document.querySelector("#sliderDots");
+
+  if(slides.length <= 1) return;
+
+  let idx = 0;
+  let timer = null;
+
+  // build dots
+  if(dotsWrap){
+    dotsWrap.innerHTML = "";
+    slides.forEach((_, i) => {
+      const d = document.createElement("span");
+      d.className = "dot" + (i === 0 ? " active" : "");
+      d.addEventListener("click", () => goTo(i, true));
+      dotsWrap.appendChild(d);
+    });
+  }
+
+  function setActive(newIdx){
+    slides.forEach((s, i) => s.classList.toggle("active", i === newIdx));
+    if(dotsWrap){
+      [...dotsWrap.children].forEach((d, i) => d.classList.toggle("active", i === newIdx));
+    }
+    idx = newIdx;
+  }
+
+  function goTo(newIdx, userAction=false){
+    setActive(newIdx);
+    if(userAction){
+      restart(); // if she taps dots, restart timing so it feels smooth
+    }
+  }
+
+  function next(){
+    const n = (idx + 1) % slides.length;
+    setActive(n);
+  }
+
+  function start(){
+    // slow fade: 6.5s per image (adjust if you want)
+    timer = setInterval(next, 6500);
+  }
+
+  function stop(){
+    if(timer) clearInterval(timer);
+    timer = null;
+  }
+
+  function restart(){
+    stop();
+    start();
+  }
+
+  // pause on press/hold (mobile friendly)
+  slider.addEventListener("touchstart", stop, {passive:true});
+  slider.addEventListener("touchend", restart, {passive:true});
+  slider.addEventListener("mouseenter", stop);
+  slider.addEventListener("mouseleave", restart);
+
+  start();
+})();
+    
 
 showScreen("#intro");
