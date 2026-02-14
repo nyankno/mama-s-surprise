@@ -147,7 +147,7 @@ const typeEl = $("#typeText");
 let typingTimer = null;
 
 // Detailed letter
-const loveLetter = `Mama Victoria 🥹💙
+const loveLetter = `Mama 🥹💙
 
 There are some people that enter your life and change it…
 And there are some people that become your life.
@@ -234,7 +234,7 @@ From your Emmanuel…
 Your Cherish 💙❤️`;
 
 // Prayer
-const prayerMessage = `Mama Victoria 💙🙏✨
+const prayerMessage = `Mama 💙🙏✨
 
 Now… let me pray for you.
 
