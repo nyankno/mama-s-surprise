@@ -277,7 +277,7 @@ Forever yours,
 Your Cherish 💙✨`;
 
 // slower typing: increase ms interval (bigger = slower)
-const BASE_SPEED = 92; // was ~34–36. This is ~0.65x speed (slower and readable)
+const BASE_SPEED = 139; // was ~34–36. This is ~0.65x speed (slower and readable)
 
 function typeWriter(text, speed=BASE_SPEED){
   clearInterval(typingTimer);
